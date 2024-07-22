@@ -28,6 +28,8 @@ function Get-AMHCTaskVersionOld {
             10 {$taskVersion = $xml.AMTASK.AMTASKHEAD.TASKINFO.TASKVERSION}
             11 {$taskVersion = $xml.AutomateTask.TaskInfo.Version.TaskVersion}
             22 {$taskVersion = $xml.AutomateTask.TaskInfo.Version.TaskVersion}
+            23 {$taskVersion = $xml.AutomateTask.TaskInfo.Version.TaskVersion}
+            24 {$taskVersion = $xml.AutomateTask.TaskInfo.Version.TaskVersion}
         }
         if ([Version]$taskVersion -ne $taskConnection.Version) {
             [AMConstructHealthCheckItem]::New($task, "Task version: $taskVersion")
